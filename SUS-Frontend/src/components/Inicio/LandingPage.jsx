@@ -35,35 +35,36 @@ const LandingPage = () => {
   const adminActions1 = [
     {
       id: 1,
-      title: "Comunicación",
+      title: "dasdas",
       description: (
         <>
-          Mantén una comunicación efectiva
+          dsadsa
           <br />
-          tanto con propietarios como inquilinos.
+          dsadasd
         </>
       ),
       icon: <FaLightbulb style={{ color: "#004d29" }} />,
     },
     {
       id: 2,
-      title: "Eficiencia",
+      title: "dasdas",
       description: (
         <>
-          Resuelve los problemas
+          dasdas
           <br />
-          de manera eficiente.
+          sdadas
         </>
       ),
       icon: <FaTools style={{ color: "#004d29" }} />,
     },
     {
       id: 3,
-      title: "Organización",
+      title: "adsas",
       description: (
         <>
-          Administra tus edificios y<br />
-          gestiona unidades fácilmente.
+          dashkjdals
+          <br />
+          fdhklaskdas
         </>
       ),
       icon: <FaBrain style={{ color: "#004d29" }} />,
@@ -73,66 +74,67 @@ const LandingPage = () => {
   const adminActions2 = [
     {
       id: 4,
-      title: "Beneficio",
+      title: "gjklsdgsd",
       description: (
         <>
-          Lleva un control detallado
+          fdklasjds
           <br />
-          de los gastos comunes.
+          fjkhlafds
         </>
       ),
       icon: <FaChartLine style={{ color: "#004d29" }} />,
     },
     {
       id: 5,
-      title: "Expensas",
+      title: "fklñsdfs",
       description: (
         <>
-          Genera la liquidación de las expensas de forma clara
-          <br />y precisa para tus propietarios e inquilinos.
+          hdfjklasjds
+          <br />
+          dahskldjas
         </>
       ),
-      icon: <FaMoneyBillWave style={{ color: "#004d29" }} />,
+      icon: <FaMoneyBillWave style={{ color: "#02523a" }} />,
     },
   ];
 
   const cardData = [
     {
       id: 1,
-      title: "Administrador",
+      title: "jdklasjdks",
       description:
-        "Gestiona todo el sistema y coordina las actividades de los propietarios e inquilinos.",
+        "djklaskljdsa",
       icon: <ImBriefcase className="w-16 h-16 mb-4" />,
       functions: [
-        "📢 Comunicación",
-        "🏢 Organización de Departamentos",
-        "⚠️ Atención de Reclamos",
-        "💰 Registro de Gastos",
-        "📑 Liquidación de Expensas",
+        "📢 djklasd",
+        "🏢 djkalsds",
+        "⚠️ djklasd",
+        "💰 kjldlaks",
+        "📑 djkalsjkds",
       ],
     },
     {
       id: 2,
-      title: "Propietario",
+      title: "hjkdasd",
       description:
-        "Visualiza sus propiedades, expensas, y se mantiene informado sobre su estado.",
+        "djklasds",
       icon: <HiUserGroup className="w-16 h-16 mb-4" />,
       functions: [
-        "🏡 Visualización de Propiedades",
-        "💬 Comunicación con Administrador",
-        "📊 Consulta de Expensas",
+        "🏡 djklsad",
+        "💬 jkdlfasdsa",
+        "📊 jkdlasdsa",
       ],
     },
     {
       id: 3,
-      title: "Inquilino",
+      title: "ajkldjsakd",
       description:
-        "Consulta reclamos y mantiene comunicación directa con el administrador y propietarios.",
+        "hdkjasdas",
       icon: <FaKey className="w-16 h-16 mb-4" />,
       functions: [
-        "💬 Comunicación de Necesidades",
-        "📝 Consulta de Expensas",
-        "📞 Reporte de Problemas",
+        "💬 dbjksads",
+        "📝 dkjsaldsa",
+        "📞 dkmhnsahd",
       ],
     },
   ];
@@ -154,37 +156,60 @@ const LandingPage = () => {
           <div className="flex justify-center w-full space-x-2 lg:space-x-7 flex-wrap">
             <button
               className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
-              onClick={() => scrollToSection("easydept")}
+              onClick={() => scrollToSection("que_es")}
             >
-              ¿Qué es EasyDept?
+              ¿Qué es?
             </button>
 
             <button
-              onClick={() => scrollToSection("usuarios")}
+              onClick={() => scrollToSection("por_que")}
               className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
             >
-              Usuarios de EasyDept
-            </button>
-
-            <button
-              className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
-              onClick={() => scrollToSection("acciones")}
-            >
-              Acciones del Administrador
+              ¿Por Qué?
             </button>
 
             <button
               className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
-              onClick={() => scrollToSection("seguridad")}
+              onClick={() => scrollToSection("para_que")}
             >
-              Seguridad
+              ¿Para Qué?
             </button>
 
             <button
               className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
-              onClick={() => scrollToSection("contacto")}
+              onClick={() => scrollToSection("quien")}
             >
-              Contáctanos
+              ¿Quién?
+            </button>
+            <button
+              className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
+              onClick={() => scrollToSection("cuando")}
+            >
+              ¿Cuándo?
+            </button>
+            <button
+              className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
+              onClick={() => scrollToSection("donde")}
+            >
+              ¿Dónde?
+            </button>
+            <button
+              className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
+              onClick={() => scrollToSection("como")}
+            >
+              ¿Cómo?
+            </button>
+            <button
+              className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
+              onClick={() => scrollToSection("con_que")}
+            >
+              ¿Con Qué?
+            </button>
+            <button
+              className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
+              onClick={() => scrollToSection("cuanto")}
+            >
+              ¿Cuánto?
             </button>
           </div>
         </div>
@@ -197,57 +222,48 @@ const LandingPage = () => {
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.4)] bg-opacity-100 bg-custom-green rounded-xl flex flex-col lg:flex-row items-center justify-center p-4 min-h-[50vh] max-w-[75%] xl:px-2">
           <div className="flex-1 flex flex-col items-center justify-center p-4 text-white order-2 lg:order-1">
             <p className="text-4xl text-porcentaje transition duration-300 transform hover:scale-105 font-semibold text-center">
-              Gestión simplificada para Administradores de Edificios
+              ¡Comprendamos la Sustentabilidad!
             </p>
           </div>
           <div className="flex-1 flex justify-center items-center p-4 order-1 lg:order-2">
             <img
-              src="logo.png"
+              src="sustentable.png"
               alt="Logo"
-              className="max-w-[90%] h-auto transition duration-500 ease-in-out transform hover:scale-110"
+              className="max-w-[50%] h-auto transition duration-500 ease-in-out transform hover:scale-110"
             />
           </div>
         </div>
       </header>
 
-      <WaveDivider color={["white"]} backgroundColor="#004d29" rotate={true} />
+      <WaveDivider color={["white"]} backgroundColor="#02523a" rotate={true} />
 
+      {/* Que es */}
       <section
-        id="easydept"
+        id="que_es"
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 bg-custom-green text-center relative"
         style={{
-          backgroundImage: 'url("/edificio.png")',
           backgroundSize: "87%",
           backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",
         }}
       >
         <h2 className="text-3xl font-semibold mb-6 text-white">
-          ¿Qué es EasyDept?
+          ¿Qué es la Sustentabilidad?
         </h2>
         <p className="text-lg text-white mb-8 max-w-2xl">
-          EasyDept es un sistema de software diseñado para optimizar la gestión
-          de consorcios y propiedades, proporcionando una plataforma con
-          herramientas personalizadas que facilitan la comunicación entre
-          administradores, propietarios e inquilinos.
+          hfgklasdhfgks
         </p>
 
         <h2 className="text-3xl font-semibold mb-6 text-white">
-          ¿Cuál es nuestra misión?
+          ¿dnjaksds?
         </h2>
         <p className="text-lg text-white mb-8 max-w-2xl">
-        Nuestra misión es optimizar la gestión de edificios, 
-        facilitando la comunicación entre administradores, 
-        propietarios e inquilinos a través de una plataforma 
-        sencilla y eficiente. Proporcionamos herramientas que 
-        agilizan procesos clave como la gestión de reclamos, 
-        documentación y cálculo de expensas, destacándonos por 
-        nuestra facilidad de uso y efectividad.
+          hjkdasjhdas
         </p>
       </section>
 
       <WaveDivider
-        color={["#c6d7cf", "#004d29"]}
+        color={["#c6d7cf", "#02523a"]}
         rotate={true}
         svgPaths={[
           "M1440,128L1360,106.7C1280,85,1120,43,960,64C800,85,640,181,480,170.7C320,160,160,64,80,42.7L0,21L0,320L80,320C160,320,320,320,480,320C640,320,800,320,960,320C1120,320,1280,320,1360,320L1440,320Z",
@@ -255,14 +271,15 @@ const LandingPage = () => {
         ]}
       />
 
+
+      {/* Por que */}
       <section
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 text-center"
-        id="usuarios"
+        id="por_que"
       >
-        <h2 className="text-3xl font-semibold mb-6">Usuarios en EasyDept</h2>
+        <h2 className="text-3xl font-semibold mb-6">¿Por qué sustentabilidad?</h2>
         <p className="text-lg mb-10">
-          EasyDept ofrece un sistema de gestión donde interactúan tres tipos de
-          usuarios:
+          dfnasdaksl
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px]">
           {cardData.map((card) => (
@@ -299,16 +316,16 @@ const LandingPage = () => {
 
       <WaveDivider color={["#f3f4f6"]} backgroundColor="white" rotate={false} />
 
+      {/* Para que */}
       <section
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 bg-gray-100 text-center"
-        id="acciones"
+        id="para_que"
       >
         <h2 className="text-3xl font-semibold mb-6">
-          Acciones del Administrador
+          Para qué la sustentabilidad
         </h2>
         <p className="text-lg mb-6">
-          Como administrador, puedes realizar múltiples tareas para facilitar la
-          gestión de edificios:
+          hdjkashds
         </p>
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -355,25 +372,18 @@ const LandingPage = () => {
 
       <MountainDivider backgroundColor="#f3f4f6" />
 
+      {/* quien */}
       <section
         className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
-        id="seguridad"
+        id="quien"
       >
         <div className="flex-1 flex items-center justify-center mb-8 md:mb-0 md:pr-8">
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-white mb-6">
-              Seguridad
+              ¿Quien es sustentable?
             </h2>
             <p className="text-gray-700 mb-8 text-white">
-              En EasyDept, tu seguridad es nuestra prioridad. Hemos creado un
-              sistema robusto que protege tu información personal y la de tus
-              inquilinos, manteniéndola segura frente a accesos no deseados.
-              Gracias a nuestras prácticas de seguridad y gestión de datos,
-              tanto tú como tus inquilinos estarán protegidos de riesgos
-              innecesarios. Con un acceso seguro y controlado, podrás gestionar
-              todo con total confianza, sabiendo que la privacidad y seguridad
-              de cada persona en tu consorcio están garantizadas en cada
-              interacción.
+              mateo
             </p>
           </div>
         </div>
@@ -381,38 +391,68 @@ const LandingPage = () => {
           <div className="flex flex-col gap-6">
             <div className="bg-white border-2 border-gray-500 rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">
-                Gestión de Información
+                dhjaskldjkas
               </h3>
               <p className="text-gray-600">
-                Implementamos protocolos de gestión de datos para garantizar que
-                la información de inquilinos y propietarios se maneje de forma
-                segura y responsable.
+                djklasjdkas
               </p>
             </div>
             <div className="bg-white border-2 border-gray-500 rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105">
-              <h3 className="text-xl font-semibold mb-4">Acceso Controlado</h3>
+              <h3 className="text-xl font-semibold mb-4">jfkldajsd</h3>
               <p className="text-gray-600">
-                Proporcionamos acceso restringido a la plataforma, asegurando
-                que solo las personas autorizadas puedan acceder a la
-                información sensible.
+                djksladjkas
               </p>
             </div>
             <div className="bg-white border-2 border-gray-500 rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">
-                Confianza y Transparencia
+                dasdljkas
               </h3>
               <p className="text-gray-600">
-                Nuestro compromiso es fomentar la confianza entre propietarios e
-                inquilinos, asegurando una comunicación abierta y transparente
-                en la gestión.
+                nldaslkdas
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* cuando */}
+      <section
+        className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
+        id="cuando"
+      >
+      </section>
+
+      {/* donde */}
+      <section
+        className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
+        id="donde"
+      >
+
+      </section>
+
+      {/* como */}
+      <section
+        className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
+        id="como"
+      >
+      </section>
+
+      {/* con que */}
+      <section
+        className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
+        id="con_que"
+      >
+      </section>
+      {/* cuanto */}
+      <section
+        className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
+        id="cuanto"
+      >
+      </section>
+
+
       <WaveDivider
-        color={["#c6d7cf", "#004d29"]}
+        color={["#c6d7cf", "#02523a"]}
         backgroundColor="white"
         rotate={true}
         svgPaths={[
@@ -426,15 +466,15 @@ const LandingPage = () => {
         id="contacto"
       >
         <div className="flex-1 flex justify-center mt-8">
-          <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl h-auto bg-custom-green rounded-lg shadow-lg flex flex-col items-center justify-center p-6">
+          <div className="w-full max-w-[60%] h-auto bg-custom-green rounded-lg shadow-lg flex flex-col items-center justify-center p-4">
             <img
-              src="logo.png"
+              src="logoBlanco.png"
               alt="Logo"
-              className="w-full max-w-[90%] h-auto mb-4 transition duration-500 ease-in-out transform hover:scale-110 cursor-pointer"
+              className="w-full max-w-[60%] h-auto mb-4 transition duration-500 ease-in-out transform hover:scale-110 cursor-pointer"
               onClick={() => scrollToSection("top")}
             />
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=easydept.utn@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=utn.sustentable@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -462,12 +502,12 @@ const LandingPage = () => {
             </ul>
           </div>
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=easydept.utn@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=utn.sustentable@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 text-custom-green font-bold"
           >
-            easydept.utn@gmail.com
+            utn.sustentable@gmail.com
           </a>
         </div>
       </section>
@@ -512,7 +552,7 @@ const WaveDivider = ({ color, backgroundColor, rotate = false, svgPaths }) => {
 };
 
 const MountainDivider = ({
-  color = ["#c6d7cf", "#397559", "#004d29"],
+  color = ["#c6d7cf", "#397559", "#02523a"],
   rotate = false,
   backgroundColor,
 }) => {

@@ -20,6 +20,65 @@ const RegistroNewsLetter = () => {
     setUsuario({ ...usuario, [name]: value })
   }
 
+  const facultadesUTN = [
+    "Avellaneda",
+    "Bahía Blanca",
+    "Buenos Aires",
+    "Chaco",
+    "Córdoba",
+    "Concepción del Uruguay",
+    "Delta",
+    "General Pacheco",
+    "Haedo",
+    "La Plata",
+    "La Rioja",
+    "Mendoza",
+    "Neuquén",
+    "Paraná",
+    "Reconquista",
+    "Resistencia",
+    "Río Grande",
+    "Rosario",
+    "San Francisco",
+    "San Nicolás",
+    "San Rafael",
+    "Santa Cruz",
+    "Santa Fe",
+    "Tierra del Fuego",
+    "Tucumán",
+    "Venado Tuerto",
+    "Villa María",
+    "Villa Mercedes"
+  ];
+
+  const especialidadesUTN = [
+    "Ingeniería Civil",
+    "Ingeniería Eléctrica",
+    "Ingeniería Electrónica",
+    "Ingeniería Electromecánica",
+    "Ingeniería en Sistemas de Información",
+    "Ingeniería Industrial",
+    "Ingeniería Mecánica",
+    "Ingeniería Química",
+    "Ingeniería Textil",
+    "Ingeniería Naval",
+    "Ingeniería Ferroviaria",
+    "Ingeniería Aeronáutica",
+    "Ingeniería en Agrimensura",
+    "Ingeniería Biomédica",
+    "Licenciatura en Administración Rural",
+    "Licenciatura en Organización Industrial",
+    "Tecnicatura Universitaria en Programación",
+    "Tecnicatura Universitaria en Sistemas Informáticos",
+    "Tecnicatura Universitaria en Mantenimiento Industrial",
+    "Tecnicatura Universitaria en Mecatrónica",
+    "Tecnicatura Universitaria en Seguridad e Higiene",
+    "Tecnicatura Universitaria en Logística",
+    "Tecnicatura Universitaria en Administración",
+    "Tecnicatura Universitaria en Química"
+  ];
+
+
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -65,7 +124,7 @@ const RegistroNewsLetter = () => {
         setAlert({
           type: "success",
           message:
-            "Correo enviado con éxito! El equipo de Easydept se pondrá en contacto con usted.",
+            "Correo enviado con éxito! Pronto te llegaran nuevas noticias.",
         })
       },
       (error) => {
@@ -98,17 +157,16 @@ const RegistroNewsLetter = () => {
 
       <div className="bg-white shadow-lg rounded-xl p-8  max-w-[90%] md:max-w-[7xl] lg:max-w-[8xl]">
         <h1 className="text-4xl text-center text-custom-green mb-6">
-          Únete a EasyDept
+          Suscríbete a nuestro Newsletter
         </h1>
 
         {/* Alerta */}
         {alert && (
           <div
-            className={`flex items-center p-4 mb-4 rounded-lg ${
-              alert.type === "error"
-                ? "bg-red-100 text-red-700"
-                : "bg-green-100 text-green-700"
-            }`}
+            className={`flex items-center p-4 mb-4 rounded-lg ${alert.type === "error"
+              ? "bg-red-100 text-red-700"
+              : "bg-green-100 text-green-700"
+              }`}
           >
             {alert.type === "error" ? (
               <FaTimesCircle className="mr-3" />
@@ -120,17 +178,14 @@ const RegistroNewsLetter = () => {
         )}
 
         <p className="text-lg text-center mt-6 mb-4">
-          Para suscribirte al newsletter, completa este formulario con tus
-          datos.
+          Completa este formulario con tus datos:
         </p>
 
         <form onSubmit={handleSubmit}>
           <div className="flex gap-8">
             {/* Tarjeta Usuario */}
             <div className="bg-white p-6 rounded-lg shadow-lg bg-opacity-90 m-auto w-full ">
-              <h2 className="w-full text-2xl text-center leading-snug text-custom-green mb-4">
-                Datos
-              </h2>
+              
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
@@ -173,37 +228,51 @@ const RegistroNewsLetter = () => {
                 </div>
                 <div className="md:col-span-2">
                   <label className="block text-sm font-medium text-gray-700">
-                    Especialidad
+                    Carrera / Especialidad
                   </label>
-                  <input
-                    type="text"
+                  <select
                     name="especialidad"
                     value={usuario.especialidad}
                     onChange={handleUsuarioChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-green"
                     required
-                  />
+                  >
+                    <option value="">Seleccioná una carrera</option>
+                    {especialidadesUTN.map((carrera) => (
+                      <option key={carrera} value={carrera}>
+                        {carrera}
+                      </option>
+                    ))}
+                  </select>
                 </div>
+
                 <div className="md:col-span-2">
                   <label className="block text-sm font-medium text-gray-700">
                     Facultad Regional
                   </label>
-                  <input
-                    type="text"
+                  <select
                     name="facultadRegional"
                     value={usuario.facultadRegional}
                     onChange={handleUsuarioChange}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-green"
                     required
-                  />
+                  >
+                    <option value="">Seleccioná una facultad</option>
+                    {facultadesUTN.map((facultad) => (
+                      <option key={facultad} value={facultad}>
+                        Facultad Regional {facultad}
+                      </option>
+                    ))}
+                  </select>
                 </div>
+
               </div>
             </div>
           </div>
 
           <button
             type="submit"
-            className="mt-6 w-full bg-custom-green text-white p-3 rounded-lg hover:bg-green-700 transition duration-200"
+            className="mt-6 w-full bg-custom-green text-white p-3 rounded-lg hover:bg-custom-green/90 transition duration-200"
           >
             Enviar Solicitud
           </button>

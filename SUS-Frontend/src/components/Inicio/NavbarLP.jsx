@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "/edificiosVerde.png";
 import { useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa"; // Icono de hamburguesa
 
@@ -23,8 +22,8 @@ const NavbarLP = () => {
         <div className="flex items-center justify-center sm:justify-start">
           {/* Logo y texto EasyDept, con evento de redirección para recargar */}
           <button onClick={reloadPage} className="flex items-center">
-            <img src={logo} alt="Logo EasyDept" className="h-6 sm:h-8 mr-3" />
-            <h1 className="text-2xl font-bold text-custom-green">EasyDept</h1>
+            <img src={"/logo.png"} alt="Logo UTN" className="h-6 sm:h-8 mr-3" />
+            <h1 className="text-2xl font-bold text-custom-green">UTN Sustentable</h1>
           </button>
         </div>
 
@@ -35,14 +34,14 @@ const NavbarLP = () => {
         >
           <FaBars className="w-6 h-6" />
         </button>
-        
+
         {/* Botones en la parte derecha para pantallas grandes (a partir de 910px) */}
         <div className="hidden lg:flex items-center space-x-6 ml-auto">
           <button
             onClick={() => navigate("/registro_newsletter")}
-            className="bg-custom-green text-white rounded px-6 py-2 transition duration-200 hover:bg-green-700"
+            className="bg-custom-green text-white rounded px-6 py-2 transition duration-200 hover:bg-custom-green/90"
           >
-            Unirse a EasyDept
+            Suscríbete Aquí!
           </button>
         </div>
       </div>
@@ -52,22 +51,10 @@ const NavbarLP = () => {
         <div className="absolute top-16 right-0 w-full bg-white shadow-md lg:hidden">
           <div className="flex flex-col items-center space-y-4 py-3">
             <button
-              onClick={() => navigate("/inicio")}
-              className="w-full text-center bg-transparent text-custom-green rounded px-6 py-1 transition duration-200 hover:bg-gray-200"
+              onClick={() => navigate("/registro_newsletter")}
+              className="bg-custom-green text-white rounded px-6 py-2 transition duration-200 hover:bg-custom-green/90"
             >
-              Iniciar Sesión
-            </button>
-            <button
-              onClick={() => navigate("/registro")}
-              className="w-full text-center bg-transparent text-custom-green rounded px-6 py-1 transition duration-200 hover:bg-gray-200"
-            >
-              Crear una Cuenta
-            </button>
-            <button
-              onClick={() => navigate("/registro/admin")}
-              className="w-full text-center bg-custom-green text-white rounded px-6 py-1 transition duration-200 hover:bg-green-700"
-            >
-              Unirse a EasyDept
+              Suscríbete Aquí!
             </button>
           </div>
         </div>
