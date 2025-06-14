@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavbarLP from "./NavbarLP";
 import { MdForest, MdOutlineContactSupport, MdOutlineContactless } from "react-icons/md";
+
+import { HiUserGroup } from "react-icons/hi";
+import { ImBriefcase } from "react-icons/im";
+import { GiRecycle } from 'react-icons/gi';
+import { FaPeopleGroup } from "react-icons/fa6";
+import { GiFactory } from 'react-icons/gi';
+
 import {
   FaKey,
   FaLightbulb,
@@ -13,7 +20,14 @@ import {
 } from "react-icons/fa";
 import { RiContactsLine, RiStarLine } from "react-icons/ri";
 import { BiQuestionMark, BiSupport } from "react-icons/bi";
-
+import { GoArrowDown } from "react-icons/go";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { PiNutBold } from "react-icons/pi";
+import { FaPerson } from "react-icons/fa6";
+import { MdCastForEducation } from "react-icons/md";
+import { IoMegaphoneOutline } from "react-icons/io5";
+import { VscTools } from "react-icons/vsc";
+import { LiaUtensilsSolid } from "react-icons/lia";
 const LandingPage = () => {
   const [activeCard, setActiveCard] = useState(null); // Estado para controlar qué tarjeta está activa
 
@@ -73,32 +87,165 @@ const LandingPage = () => {
     },
   ];
 
-  // const paraQueActions2 = [
-  //   {
-  //     id: 4,
-  //     title: "Finalidad",
-  //     description: (
-  //       <>
-  //         fdklasjds
-  //         <br />
-  //         fjkhlafds
-  //       </>
-  //     ),
-  //     icon: <FaChartLine style={{ color: "#004d29" }} />,
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "Intencion",
-  //     description: (
-  //       <>
-  //         hdfjklasjds
-  //         <br />
-  //         dahskldjas
-  //       </>
-  //     ),
-  //     icon: <FaMoneyBillWave style={{ color: "#02523a" }} />,
-  //   },
-  // ];
+   const costosSustentabilidad = [
+    {
+      id: 1,
+      title: "Inversión Inicial",
+      description: (
+        <>
+          5-20%
+          <br />
+          Capital anual operativo
+          <br />
+          de la empresa
+        </>
+        
+      ),
+      icon: <FaChartLine style={{ color: "#004d29" }} />,
+    },
+    {
+      id: 2,
+      title: "Reducción de Productividad",
+      description: (
+        <>
+          5-15%
+          <br />
+          Durante la transición
+        </>
+      ),
+      icon: <GoArrowDown style={{ color: "#02523a" }} />,
+    },
+        {
+      id: 3,
+      title: "Reducción de Contaminación",
+      description: (
+        <>
+          Hasta un 80% del C02
+                    <br />
+                    en algunos casos
+        </>
+        
+      ),
+      icon: <GiRecycle style={{ color: "#004d29" }} />,
+    },
+    {
+      id: 4,
+      title: "Impacto Social",
+      description: (
+        <>
+          Influencia en 
+          <br />
+          miles de personas
+          
+        </>
+      ),
+      icon: <FaPeopleGroup style={{ color: "#02523a" }} />,
+    },
+        {
+      id: 5,
+      title: "Contaminación Actual",
+      description: (
+        <>
+          150-400 tn de CO2 al año
+          <br />
+          emitida por una planta de producción 
+
+        </>
+        
+      ),
+      icon: <GiFactory style={{ color: "#004d29" }} />,},
+
+  ];
+    const recursos = [
+    {
+      id: 1,
+      title: "Instrumentos",
+      description:
+        "",
+      icon: <IoNewspaperOutline className="w-16 h-16 mb-4" />,
+      functions: [
+        "• Normas y certificaciones",
+        "• Protocolos de gestión ambiental",
+        "• Sistemas de medición de impactos",
+      ],
+    },
+    {
+      id: 2,
+      title: "Objetos",
+      description:
+        "",
+      icon: <PiNutBold className="w-16 h-16 mb-4" />,
+      functions: [
+        "• Separación de residuos",
+        "• Dispositivos de ahorro energético",
+        "• Utensilios reutilizables",
+      ],
+    },
+    {
+      id: 3,
+      title: "Recursos",
+      description:
+        "",
+      icon: <FaPerson className="w-16 h-16 mb-4" />,
+      functions: [
+        "• Conocimientos técnicos",
+        "• Información ambiental",
+        "• Capital para inversiones verdes",
+        "• Recursos humanos",
+      ],
+    },
+        {
+      id: 4,
+      title: "Elementos",
+      description:
+        "",
+      icon: <MdCastForEducation className="w-16 h-16 mb-4" />,
+      functions: [
+        "• Educación ambiental",
+        "• Tecnologías limpias",
+        "• Plataformas de comunicación",
+        "• Marcos legales",
+      ],
+    },
+        {
+      id: 5,
+      title: "Medios",
+      description:
+        "",
+      icon: <IoMegaphoneOutline className="w-16 h-16 mb-4" />,
+      functions: [
+        "• Campañas educativas",
+        "• Talleres",
+        "• Medios de comunicación",
+        "• Movimientos sociales",
+      ],
+    },
+        {
+      id: 6,
+      title: "Herramientas",
+      description:
+        "",
+      icon: <VscTools className="w-16 h-16 mb-4" />,
+      functions: [
+        "• Aplicaciones para monitorear el consumo energético",
+        "• Softwares para gestión ambiental",
+        "• Instrumentos de medición y control ambiental",
+      ],
+    },
+        {
+      id: 7,
+      title: "Utensilios",
+      description:
+        "",
+      icon: <LiaUtensilsSolid className="w-16 h-16 mb-4" />,
+      functions: [
+        "• Recipientes para reciclaje",
+        "• Sistemas para compostaje",
+        "• Kits de ahorro de agua",
+        "• Productos ecológicos certificados",
+      ],
+    },
+  ];
 
   const cardData = [
     {
@@ -437,20 +584,84 @@ const LandingPage = () => {
         id="como"
       >
       </section>
+      <WaveDivider color={["#f3f4f6"]} backgroundColor="white" rotate={false} />
 
       {/* con que */}
       <section
-        className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
+        className="min-h-screen flex flex-col items-center justify-center py-16 px-8 text-center"
         id="con_que"
       >
+        <h2 className="text-3xl font-semibold mb-6">¿Con qué recursos se logra?</h2>
+        <br />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px]">
+          {recursos.map((card) => (
+            <div
+              key={card.id}
+              className="relative bg-custom-green text-white rounded-lg shadow-lg p-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-72"
+              onClick={() =>
+                setActiveCard(activeCard === card.id ? null : card.id)
+              }
+            >
+              <div className="flex flex-col items-center justify-center h-full">
+                {activeCard === card.id ? (
+                  <>
+                    <h3 className="text-xl font-semibold">{card.title}</h3>
+                    <p className="text-lg text-center">{card.description}</p>
+                    <ul className="mt-4 text-left">
+                      {card.functions.map((func, index) => (
+                        <li key={index}>{func}</li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <>
+                    {card.icon}
+                    <h3 className="text-xl font-semibold">{card.title}</h3>
+                    <p className="text-lg text-center">Haz clic para ver más</p>
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
+      <MountainDivider backgroundColor="#f3f4f6" />
+
+      <WaveDivider color={["#f3f4f6"]} backgroundColor="white" rotate={false} />
+
+
       {/* cuanto */}
       <section
-        className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
+        className="min-h-screen flex flex-col items-center justify-center py-16 px-8 bg-gray-100 text-center"
         id="cuanto"
       >
+        <h2 className="text-3xl font-semibold mb-6">
+          ¿Cuánto cuesta y se gana siendo sustentable?
+        </h2>
+                  <br />
+        <div className="flex justify-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 grid-cols-[auto-fit] ">
+            {costosSustentabilidad.map((action) => (
+              <div
+                key={action.id}
+                className="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 min-h-[200px] flex flex-col justify-between"
+                style={{
+                  border: "2px solid #004d29",
+                  borderRadius: "8px",
+                }}
+              >
+                <div className="flex justify-center items-center mb-4 text-4xl">
+                  {action.icon}
+                </div>
+                <h3 className="font-semibold text-lg">{action.title}</h3>
+                <p className="text-gray-600">{action.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <br />
       </section>
-
+      <MountainDivider backgroundColor="#f3f4f6" />
 
       <WaveDivider
         color={["#c6d7cf", "#02523a"]}
