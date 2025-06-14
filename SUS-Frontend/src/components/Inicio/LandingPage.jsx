@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavbarLP from "./NavbarLP";
+import { MdForest, MdOutlineContactSupport, MdOutlineContactless } from "react-icons/md";
+
 import { HiUserGroup } from "react-icons/hi";
 import { ImBriefcase } from "react-icons/im";
 import { GiRecycle } from 'react-icons/gi';
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GiFactory } from 'react-icons/gi';
+
 import {
   FaKey,
   FaLightbulb,
   FaTools,
-  FaBrain,
-  FaChartLine,
+  FaHandHoldingHeart,
+  FaFlagCheckered,
   FaMoneyBillWave,
   FaLock,
 } from "react-icons/fa";
@@ -26,7 +29,6 @@ import { IoMegaphoneOutline } from "react-icons/io5";
 import { VscTools } from "react-icons/vsc";
 import { LiaUtensilsSolid } from "react-icons/lia";
 const LandingPage = () => {
-  const navigate = useNavigate();
   const [activeCard, setActiveCard] = useState(null); // Estado para controlar qué tarjeta está activa
 
   // colores:
@@ -42,69 +44,46 @@ const LandingPage = () => {
   // M0,128L80,106.7C160,85,320,43,480,64C640,85,800,181,960,170.7C1120,160,1280,64,1360,42.7L1440,21L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z
   // M0,192L40,186.7C80,181,160,171,240,154.7C320,139,400,117,480,128C560,139,640,181,720,192C800,203,880,181,960,154.7C1040,128,1120,96,1200,96C1280,96,1360,128,1400,144L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z
 
-  const adminActions1 = [
+  const paraQueActions1 = [
     {
       id: 1,
-      title: "dasdas",
+      title: "Propósito",
       description: (
         <>
-          dsadsa
-          <br />
-          dsadasd
+          Promover un modelo de desarrollo humano que asegure el bienestar de las personas sin agotar los recursos del planeta ni causar daños irreversibles al medio ambiente.
         </>
       ),
-      icon: <FaLightbulb style={{ color: "#004d29" }} />,
+      icon: <FaLightbulb style={{ color: "#02523a" }} />,
     },
     {
       id: 2,
-      title: "dasdas",
+      title: "Objetivo",
       description: (
         <>
-          dasdas
-          <br />
-          sdadas
+          Satisfacer las necesidades actuales de la sociedad sin comprometer las posibilidades de las futuras generaciones, manteniendo un equilibrio
         </>
       ),
-      icon: <FaTools style={{ color: "#004d29" }} />,
+      icon: <FaTools style={{ color: "#02523a" }} />,
     },
     {
       id: 3,
-      title: "adsas",
+      title: "Finalidad",
       description: (
         <>
-          dashkjdals
-          <br />
-          fdhklaskdas
+          Construir un futuro justo, equitativo y saludable a través del uso racional de los recursos, la conservación de los ecosistemas, y la promoción de prácticas responsables e inclusivas.
         </>
       ),
-      icon: <FaBrain style={{ color: "#004d29" }} />,
+      icon: <FaFlagCheckered style={{ color: "#02523a" }} />,
     },
-  ];
-
-  const adminActions2 = [
     {
       id: 4,
-      title: "gjklsdgsd",
+      title: "Intencion",
       description: (
         <>
-          fdklasjds
-          <br />
-          fjkhlafds
+          Impulsar un cambio que transforme la manera en que producimos, consumimos y convivimos,promoviendo una cultura de responsabilidad intergeneracional y de respeto hacia el entorno natural
         </>
       ),
-      icon: <FaChartLine style={{ color: "#004d29" }} />,
-    },
-    {
-      id: 5,
-      title: "fklñsdfs",
-      description: (
-        <>
-          hdfjklasjds
-          <br />
-          dahskldjas
-        </>
-      ),
-      icon: <FaMoneyBillWave style={{ color: "#02523a" }} />,
+      icon: <FaHandHoldingHeart style={{ color: "#02523a" }} />,
     },
   ];
 
@@ -271,41 +250,27 @@ const LandingPage = () => {
   const cardData = [
     {
       id: 1,
-      title: "jdklasjdks",
+      title: "Causa",
       description:
-        "djklaskljdsa",
-      icon: <ImBriefcase className="w-16 h-16 mb-4" />,
-      functions: [
-        "📢 djklasd",
-        "🏢 djkalsds",
-        "⚠️ djklasd",
-        "💰 kjldlaks",
-        "📑 djkalsjkds",
-      ],
+        "El desarrollo histórico ha sido insostenible, generando impactos negativos en el medio ambiente, agotando recursos naturales y creando desigualdades sociales.",
+      icon: <MdOutlineContactSupport className="w-16 h-16 mb-4" />,
+      functions: [],
     },
     {
       id: 2,
-      title: "hjkdasd",
+      title: "Motivo",
       description:
-        "djklasds",
-      icon: <HiUserGroup className="w-16 h-16 mb-4" />,
-      functions: [
-        "🏡 djklsad",
-        "💬 jkdlfasdsa",
-        "📊 jkdlasdsa",
-      ],
+        "Responder a los desafíos ambientales, sociales y económicos que amenazan la estabilidad del planeta y la vida de las futuras generaciones.",
+      icon: <MdOutlineContactless className="w-16 h-16 mb-4" />,
+      functions: [],
     },
     {
       id: 3,
-      title: "ajkldjsakd",
+      title: "Razón",
       description:
-        "hdkjasdas",
-      icon: <FaKey className="w-16 h-16 mb-4" />,
-      functions: [
-        "💬 dbjksads",
-        "📝 dkjsaldsa",
-        "📞 dkmhnsahd",
-      ],
+        "Necesitamos urgentemente  replantear la forma en que producimos, consumimos y nos relacionamos con el entorno, para garantizar un equilibrio entre el desarrollo humano y la conservación de los recursos.",
+      icon: <MdForest className="w-16 h-16 mb-4" />,
+      functions: [],
     },
   ];
 
@@ -412,24 +377,22 @@ const LandingPage = () => {
         id="que_es"
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 bg-custom-green text-center relative"
         style={{
+          backgroundImage: "url(/mundoSustentable.png)",
           backgroundSize: "87%",
           backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h2 className="text-3xl font-semibold mb-6 text-white">
-          ¿Qué es la Sustentabilidad?
-        </h2>
-        <p className="text-lg text-white mb-8 max-w-2xl">
-          hfgklasdhfgks
-        </p>
-
-        <h2 className="text-3xl font-semibold mb-6 text-white">
-          ¿dnjaksds?
-        </h2>
-        <p className="text-lg text-white mb-8 max-w-2xl">
-          hjkdasjhdas
-        </p>
+        <div className="bg-gradient-to-b from-custom-green/60 to-custom-green/90 rounded-xl p-4 shadow-xl gradiant-white">
+          <h2 className="text-3xl font-semibold mb-6 text-white">
+            ¿Qué es la Sustentabilidad?
+          </h2>
+          <p className="text-lg text-white mb-8 max-w-2xl">
+            Es la capacidad de un sistema para mantenerse a lo largo del tiempo sin agotar los recursos naturales ni dañar el entorno.
+            <br /><br />
+            La sustentabilidad implica ver el mundo desde una perspectiva solidaria y responsable, donde el bienestar colectivo y el cuidado del planeta están por encima del interés individual.
+          </p>
+        </div>
       </section>
 
       <WaveDivider
@@ -449,7 +412,7 @@ const LandingPage = () => {
       >
         <h2 className="text-3xl font-semibold mb-6">¿Por qué sustentabilidad?</h2>
         <p className="text-lg mb-10">
-          dfnasdaksl
+          Es una reacción a los efectos perjudiciales del desarrollo insostenible.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px]">
           {cardData.map((card) => (
@@ -482,6 +445,9 @@ const LandingPage = () => {
             </div>
           ))}
         </div>
+        <hr class="border-t-2 border-gray-300 my-6 w-[90%] mx-auto mt-10" />
+        <p className="text-lg  italic">La sustentabilidad no es una opción, sino una necesidad urgente para asegurar un futuro habitable, protegiendo el planeta y garantizando bienestar para las próximas generaciones.</p>
+        <hr class="border-t-2 border-gray-300 my-6 w-[90%] mx-auto" />
       </section>
 
       <WaveDivider color={["#f3f4f6"]} backgroundColor="white" rotate={false} />
@@ -492,14 +458,14 @@ const LandingPage = () => {
         id="para_que"
       >
         <h2 className="text-3xl font-semibold mb-6">
-          Para qué la sustentabilidad
+          ¿Para qué la sustentabilidad?
         </h2>
         <p className="text-lg mb-6">
-          hdjkashds
+          La sustentabilidad no es solo una meta, sino una necesidad urgente y compartida
         </p>
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {adminActions1.map((action) => (
+          <div className="grid grid-cols-4 gap-10">
+            {paraQueActions1.map((action) => (
               <div
                 key={action.id}
                 className="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 min-h-[200px] flex flex-col justify-between"
@@ -518,9 +484,9 @@ const LandingPage = () => {
           </div>
         </div>
         <br />
-        <div className="flex justify-center w-full">
+        {/* <div className="flex justify-center w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-            {adminActions2.map((action) => (
+            {paraQueActions2.map((action) => (
               <div
                 key={action.id}
                 className="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 min-h-[200px] flex flex-col justify-between"
@@ -537,53 +503,65 @@ const LandingPage = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
 
       <MountainDivider backgroundColor="#f3f4f6" />
 
       {/* quien */}
       <section
-        className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
+        className="min-h-screen flex flex-col items-center justify-center py-16 px-8 text-center bg-custom-green"
         id="quien"
       >
-        <div className="flex-1 flex items-center justify-center mb-8 md:mb-0 md:pr-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-semibold text-white mb-6">
-              ¿Quien es sustentable?
-            </h2>
-            <p className="text-gray-700 mb-8 text-white">
-              mateo
-            </p>
-          </div>
+        <h2 className="text-3xl font-semibold mb-6">¿Quién?</h2>
+        <p className="text-lg mb-10">
+          Es una reacción a los efectos perjudiciales del desarrollo insostenible.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px]">
+          {cardData.map((card) => (
+            <div
+              key={card.id}
+              className="relative bg-custom-green text-white rounded-lg shadow-lg p-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-72"
+              onClick={() =>
+                setActiveCard(activeCard === card.id ? null : card.id)
+              }
+            >
+              <div className="flex flex-col items-center justify-center h-full">
+                {activeCard === card.id ? (
+                  <>
+                    <h3 className="text-xl font-semibold">{card.title}</h3>
+                    <p className="text-lg text-center">{card.description}</p>
+                    <ul className="mt-4 text-left">
+                      {card.functions.map((func, index) => (
+                        <li key={index}>{func}</li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <>
+                    {card.icon}
+                    <h3 className="text-xl font-semibold">{card.title}</h3>
+                    <p className="text-lg text-center">Haz clic para ver más</p>
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="flex-1">
-          <div className="flex flex-col gap-6">
-            <div className="bg-white border-2 border-gray-500 rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105">
-              <h3 className="text-xl font-semibold mb-4">
-                dhjaskldjkas
-              </h3>
-              <p className="text-gray-600">
-                djklasjdkas
-              </p>
-            </div>
-            <div className="bg-white border-2 border-gray-500 rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105">
-              <h3 className="text-xl font-semibold mb-4">jfkldajsd</h3>
-              <p className="text-gray-600">
-                djksladjkas
-              </p>
-            </div>
-            <div className="bg-white border-2 border-gray-500 rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105">
-              <h3 className="text-xl font-semibold mb-4">
-                dasdljkas
-              </h3>
-              <p className="text-gray-600">
-                nldaslkdas
-              </p>
-            </div>
-          </div>
-        </div>
+        <hr class="border-t-2 border-gray-300 my-6 w-[90%] mx-auto mt-10" />
+        <p className="text-lg  italic">La sustentabilidad no es una opción, sino una necesidad urgente para asegurar un futuro habitable, protegiendo el planeta y garantizando bienestar para las próximas generaciones.</p>
+        <hr class="border-t-2 border-gray-300 my-6 w-[90%] mx-auto" />
       </section>
+
+      <WaveDivider
+        color={["#c6d7cf", "#02523a"]}
+        backgroundColor="white"
+        rotate={true}
+        svgPaths={[
+          "M1440,128L1360,106.7C1280,85,1120,43,960,64C800,85,640,181,480,170.7C320,160,160,64,80,42.7L0,21L0,320L80,320C160,320,320,320,480,320C640,320,800,320,960,320C1120,320,1280,320,1360,320L1440,320Z",
+          "M0,160C80,120,160,80,240,64C320,48,400,64,480,96C560,128,640,176,720,192C800,208,880,176,960,160C1040,144,1120,128,1200,160C1280,192,1360,256,1440,320L1440,320L0,320Z",
+        ]}
+      />
 
       {/* cuando */}
       <section
@@ -694,6 +672,12 @@ const LandingPage = () => {
           "M0,160C80,120,160,80,240,64C320,48,400,64,480,96C560,128,640,176,720,192C800,208,880,176,960,160C1040,144,1120,128,1200,160C1280,192,1360,256,1440,320L1440,320L0,320Z",
         ]}
       />
+
+      <section
+        className="min-h-[30%] flex flex-col lg:flex-row items-center justify-center py-16 px-8 bg-white text-center"
+        id="contacto">
+        <button className="bg-custom-green p-4 m-2 text-white font-bold rounded-xl shadow-xl hover:scale-[1.2] transition transition-duration-200">Descarga el informe completo</button>
+      </section>
 
       <section
         className="min-h-screen flex flex-col lg:flex-row items-center justify-center py-16 px-8 bg-white text-center"

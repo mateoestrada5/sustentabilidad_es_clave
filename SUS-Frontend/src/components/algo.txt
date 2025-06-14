@@ -1,0 +1,41 @@
+<section
+        className="py-16 px-8 bg-custom-green flex flex-col md:flex-row"
+        id="quien"
+      >
+        <div className="flex-1 flex items-center justify-center mb-8 md:mb-0 md:pr-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-semibold text-white mb-6">
+              ¿Quien es sustentable?
+            </h2>
+            <p className="text-gray-700 mb-8 text-white">
+              mateo
+            </p>
+          </div>
+        </div>
+        <div className="flex-1">
+          <div className="flex flex-col gap-6">
+            <div className="bg-white border-2 border-gray-500 rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105">
+              <h3 className="text-xl font-semibold mb-4">
+                dhjaskldjkas
+              </h3>
+              <p className="text-gray-600">
+                djklasjdkas
+              </p>
+            </div>
+            <div className="bg-white border-2 border-gray-500 rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105">
+              <h3 className="text-xl font-semibold mb-4">jfkldajsd</h3>
+              <p className="text-gray-600">
+                djksladjkas
+              </p>
+            </div>
+            <div className="bg-white border-2 border-gray-500 rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105">
+              <h3 className="text-xl font-semibold mb-4">
+                dasdljkas
+              </h3>
+              <p className="text-gray-600">
+                nldaslkdas
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
