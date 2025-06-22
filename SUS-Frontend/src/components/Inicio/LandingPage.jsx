@@ -125,6 +125,9 @@ const LandingPage = () => {
       ),
       icon: <GiRecycle style={{ color: "#004d29" }} />,
     },
+
+  ];
+  const costosSustentabilidad2 = [
     {
       id: 4,
       title: "Impacto Social",
@@ -230,7 +233,9 @@ const LandingPage = () => {
         "• Instrumentos de medición y control ambiental",
       ],
     },
-    {
+  ];
+
+  const recursos2 = [{
       id: 7,
       title: "Utensilios",
       description:
@@ -242,8 +247,7 @@ const LandingPage = () => {
         "• Kits de ahorro de agua",
         "• Productos ecológicos certificados",
       ],
-    },
-  ];
+    },]
 
   const cardDataPorQue = [
     {
@@ -272,7 +276,7 @@ const LandingPage = () => {
     },
   ];
 
-  const cardDataQuien = [
+  const cardDataQuien1 = [
     {
       id: 1,
       title: "Gobiernos",
@@ -294,7 +298,9 @@ const LandingPage = () => {
         "Practican el consumo consciente, participan activamente en la defensa ambiental, y exigen transparencia de consumo a los gobiernos y empresas.",
       icon: <IoPeople className="w-16 h-16 mb-4" />,
     },
-    {
+  ]
+
+  const cardDataQuien2 = [{
       id: 4,
       title: "ONGs y Activistas",
       description:
@@ -454,7 +460,7 @@ const LandingPage = () => {
           {cardDataPorQue.map((card) => (
             <div
               key={card.id}
-              className="relative bg-custom-green text-white rounded-lg shadow-lg p-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-72"
+              className="relative bg-gradient-to-t from-custom-green/90 to-custom-green/100 gradiant-white text-slate-200 rounded-lg shadow-xl p-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-72"
               onClick={() =>
                 setActiveCard(activeCard === card.id ? null : card.id)
               }
@@ -530,7 +536,35 @@ const LandingPage = () => {
           La responsabilidad es colectiva y compartida. Todos en la socidad participan y asumen un rol para preservar el planeta.
         </p>
         <div className="grid grid-cols-3 gap-8 w-full max-w-[1200px]">
-          {cardDataQuien.map((card) => (
+          {cardDataQuien1.map((card) => (
+            <div
+              key={card.id}
+              className="relative bg-slate-100 text-black rounded-xl shadow-lg p-2 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-72"
+              onClick={() =>
+                setActiveCard(activeCard === card.id ? null : card.id)
+              }
+            >
+              <div className="border-2 border-custom-green h-full rounded-xl">
+                <div className="flex flex-col items-center justify-center h-full p-4">
+                  {activeCard === card.id ? (
+                    <>
+                      <h3 className="text-xl font-semibold ">{card.title}</h3>
+                      <p className="text-lg text-center">{card.description}</p>
+                    </>
+                  ) : (
+                    <>
+                      {card.icon}
+                      <h3 className="text-xl font-semibold ">{card.title}</h3>
+                      <p className="text-lg text-center">Haz clic para ver más</p>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-2 gap-8 max-w-[870px] p-6">
+          {cardDataQuien2.map((card) => (
             <div
               key={card.id}
               className="relative bg-slate-100 text-black rounded-xl shadow-lg p-2 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-72"
@@ -625,11 +659,42 @@ const LandingPage = () => {
       >
         <h2 className="text-3xl font-semibold mb-6">¿Con qué recursos se logra?</h2>
         <br />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px]">
+        <div className="grid grid-cols-3 gap-8 w-full max-w-[1200px]">
           {recursos.map((card) => (
             <div
               key={card.id}
-              className="relative bg-custom-green text-white rounded-lg shadow-lg p-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-72"
+              className="relative bg-gradient-to-t from-custom-green/90 to-custom-green/100 gradiant-white text-slate-200 rounded-lg shadow-xl p-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-72"
+              onClick={() =>
+                setActiveCard(activeCard === card.id ? null : card.id)
+              }
+            >
+              <div className="flex flex-col items-center justify-center h-full">
+                {activeCard === card.id ? (
+                  <>
+                    <h3 className="text-xl font-semibold">{card.title}</h3>
+                    <p className="text-lg text-center">{card.description}</p>
+                    <ul className="mt-4 text-left">
+                      {card.functions.map((func, index) => (
+                        <li key={index}>{func}</li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <>
+                    {card.icon}
+                    <h3 className="text-xl font-semibold">{card.title}</h3>
+                    <p className="text-lg text-center">Haz clic para ver más</p>
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-1 gap-8 w-full max-w-[380px] m-6">
+          {recursos2.map((card) => (
+            <div
+              key={card.id}
+              className="relative bg-gradient-to-t from-custom-green/90 to-custom-green/100 gradiant-white text-slate-200 rounded-lg shadow-xl p-6 transition-transform duration-300 transform hover:scale-105 cursor-pointer h-72"
               onClick={() =>
                 setActiveCard(activeCard === card.id ? null : card.id)
               }
@@ -670,8 +735,28 @@ const LandingPage = () => {
         </h2>
         <br />
         <div className="flex justify-center">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 grid-cols-[auto-fit] ">
+          <div className="grid grid-cols-3 gap-10">
             {costosSustentabilidad.map((action) => (
+              <div
+                key={action.id}
+                className="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 min-h-[200px] flex flex-col justify-between"
+                style={{
+                  border: "2px solid #004d29",
+                  borderRadius: "8px",
+                }}
+              >
+                <div className="flex justify-center items-center mb-4 text-4xl">
+                  {action.icon}
+                </div>
+                <h3 className="font-semibold text-lg">{action.title}</h3>
+                <p className="text-gray-600">{action.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="grid grid-cols-2 gap-10 m-6">
+            {costosSustentabilidad2.map((action) => (
               <div
                 key={action.id}
                 className="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 min-h-[200px] flex flex-col justify-between"
