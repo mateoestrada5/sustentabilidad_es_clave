@@ -12,6 +12,9 @@ import { IoMegaphoneOutline, IoPeople, IoNewspaperOutline } from "react-icons/io
 import { VscTools } from "react-icons/vsc";
 import { LiaUtensilsSolid } from "react-icons/lia";
 import { IoMdBusiness } from "react-icons/io";
+import { FiHome } from "react-icons/fi";
+import { MdWork, MdLocationCity } from "react-icons/md";
+import { FaUsers } from "react-icons/fa";
 
 
 
@@ -236,18 +239,18 @@ const LandingPage = () => {
   ];
 
   const recursos2 = [{
-      id: 7,
-      title: "Utensilios",
-      description:
-        "",
-      icon: <LiaUtensilsSolid className="w-16 h-16 mb-4" />,
-      functions: [
-        "• Recipientes para reciclaje",
-        "• Sistemas para compostaje",
-        "• Kits de ahorro de agua",
-        "• Productos ecológicos certificados",
-      ],
-    },]
+    id: 7,
+    title: "Utensilios",
+    description:
+      "",
+    icon: <LiaUtensilsSolid className="w-16 h-16 mb-4" />,
+    functions: [
+      "• Recipientes para reciclaje",
+      "• Sistemas para compostaje",
+      "• Kits de ahorro de agua",
+      "• Productos ecológicos certificados",
+    ],
+  },]
 
   const cardDataPorQue = [
     {
@@ -301,19 +304,19 @@ const LandingPage = () => {
   ]
 
   const cardDataQuien2 = [{
-      id: 4,
-      title: "ONGs y Activistas",
-      description:
-        "Denuncian ecocidios, educan comunidades y presionan a los tomadores de decisiones mediante campañas y litigios.",
-      icon: <MdForest className="w-16 h-16 mb-4" />,
-    },
-    {
-      id: 5,
-      title: "Educadores y Medios de Comunicación",
-      description:
-        "Transmiten buenas prácticas y alertan sobre problemas ambientales para generar conciencia en la sociedad.",
-      icon: <FaSchool className="w-16 h-16 mb-4" />,
-    },
+    id: 4,
+    title: "ONGs y Activistas",
+    description:
+      "Denuncian ecocidios, educan comunidades y presionan a los tomadores de decisiones mediante campañas y litigios.",
+    icon: <MdForest className="w-16 h-16 mb-4" />,
+  },
+  {
+    id: 5,
+    title: "Educadores y Medios de Comunicación",
+    description:
+      "Transmiten buenas prácticas y alertan sobre problemas ambientales para generar conciencia en la sociedad.",
+    icon: <FaSchool className="w-16 h-16 mb-4" />,
+  },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -322,6 +325,41 @@ const LandingPage = () => {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  const comoItems = [
+    {
+      title: "Manera",
+      desc: "Adoptar prácticas sostenibles en la vida y empresas.",
+    },
+    {
+      title: "Método",
+      desc: "Implementar normas como ISO 14001 y la regla de las 3R.",
+    },
+    {
+      title: "Proceso",
+      desc: "Educar y concientizar sobre huella de carbono y economía circular.",
+    },
+    {
+      title: "Forma",
+      desc: "Participar en comunidades con limpieza y reforestación.",
+    },
+    {
+      title: "Procedimiento",
+      desc: "Adoptar consumo responsable y ahorrar recursos.",
+    },
+    {
+      title: "Modo",
+      desc: "Usar tecnologías verdes como energías limpias e innovadoras.",
+    },
+    {
+      title: "Técnicas",
+      desc: "Separar residuos, reparar fugas y usar electrodomésticos eficientes.",
+    },
+    {
+      title: "Instrucciones",
+      desc: "Informar, educar y participar activamente en sustentabilidad.",
+    },
+  ];
 
   return (
     <div className="bg-white font-montserrat text-gray-800">
@@ -608,10 +646,54 @@ const LandingPage = () => {
 
       {/* cuando */}
       <section
-        className="py-16 px-8 bg-white flex flex-col min-h-screen"
+        className="px-8 bg-white flex flex-col justify-center min-h-screen"
         id="cuando"
       >
-        cuando
+        <div className="grid grid-cols-2">
+          <div className="flex-1 flex items-center justify-center m-20">
+            <div className="text-center">
+              <h2 className="text-3xl font-semibold text-black mb-6">
+                ¿Cuándo hay que ser sustentable?
+              </h2>
+              <p className="mb-8 text-black">
+                Involucrarse en la sustentabilidad debe ser <span className="font-bold">una acción proactiva y oportuna</span>, no una reacción tardía. La clave está en actuar desde el primer indicio de un problema, participar en las decisiones ambientales y acompañar a quienes ya están comprometidos con el cuidado del planeta.
+              </p>
+              <p className="mb-8 text-black">
+                Cuanto más temprano y constante sea el compromiso, mayores serán las posibilidades de <span className="font-bold">proteger el entorno y asegurar un futuro sostenible</span> para todos.
+              </p>
+
+            </div>
+          </div>
+          <div className="flex-1">
+            <div className="flex flex-col gap-6 mr-9">
+              <div className="bg-custom-green border-2 rounded-lg shadow-xl p-6 text-center transition-transform transform hover:scale-105">
+                <h3 className="text-xl font-semibold mb-4 text-slate-100">
+                  Momento
+                </h3>
+                <p className="text-slate-100">
+                  Es necesario actuar cuando se detecta un problema ambiental o cuando una decisión podría afectar al entorno. También es valioso involucrarse al aportar ideas, educación o acciones que fomenten el desarrollo sostenible, y al apoyar a quienes ya están tomando iniciativas.
+                </p>
+              </div>
+              <div className="bg-custom-green border-2 rounded-lg shadow-xl p-6 text-center transition-transform transform hover:scale-105">
+                <h3 className="text-xl font-semibold mb-4 text-slate-100">
+                  Tiempo
+                </h3>
+                <p className="text-slate-100">
+                  El momento ideal para involucrarse es desde el principio: en la etapa de prevención o al inicio de un conflicto ambiental. Participar desde temprano permite influir en las decisiones y maximiza el impacto positivo, evitando consecuencias irreversibles.
+                </p>
+
+              </div>
+              <div className="bg-custom-green border-2 rounded-lg shadow-xl p-6 text-center transition-transform transform hover:scale-105">
+                <h3 className="text-xl font-semibold mb-4 text-slate-100">
+                  Ocasión
+                </h3>
+                <p className="text-slate-100">
+                  Las mejores oportunidades para involucrarse surgen cuando aparecen señales tempranas de deterioro ambiental, durante procesos de planificación, o cuando la comunidad se moviliza para proteger su entorno. Cada instancia para prevenir daños es una ocasión valiosa para actuar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <WaveDivider
@@ -627,11 +709,97 @@ const LandingPage = () => {
 
       {/* donde */}
       <section
-        className="py-16 px-8 bg-custom-green flex flex-col min-h-screen text-white"
+        className="px-8 bg-custom-green flex flex-col justify-center min-h-screen"
         id="donde"
       >
-        donde
+        <div className="grid grid-cols-2">
+          {/* Lado izquierdo: título e introducción */}
+          <div className="flex-1 flex items-center justify-center m-20">
+            <div className="text-center">
+              <h2 className="text-3xl font-semibold text-slate-100 mb-6">
+                ¿Dónde hay que ser sustentable?
+              </h2>
+              <p className="mb-8 text-slate-100">
+                La sustentabilidad no tiene un único lugar: <span className="font-bold">debe practicarse en todos los espacios</span> de nuestra vida diaria. Desde el hogar hasta los entornos naturales, cada sitio ofrece oportunidades concretas para cuidar el ambiente y construir un futuro responsable.
+              </p>
+              <p className="mb-8 text-slate-100">
+                Adaptar nuestras acciones a cada contexto y sumar esfuerzos individuales y colectivos <span className="font-bold">multiplica el impacto positivo</span> en el planeta.
+              </p>
+            </div>
+          </div>
+
+          {/* Lado derecho: tarjetas por lugar */}
+          <div className="flex-1">
+            <div className="grid grid-cols-2 gap-6 mr-9">
+              {/* Hogar */}
+              <div className="bg-white rounded-lg shadow-xl p-6 text-center transition-transform transform hover:scale-105">
+                <div className="flex flex-row items-center justify-center gap-2 mb-3">
+                  <FiHome size={32} className="text-scale-100" />
+                  <h3 className="text-xl font-semibold text-black">
+                    Hogar
+                  </h3>
+                </div>
+                <p className="text-custom-gray">
+                  El primer espacio para actuar. Separar residuos, ahorrar energía y agua, y elegir productos responsables son hábitos que inician el cambio desde casa.
+                </p>
+              </div>
+
+              {/* Trabajo */}
+              <div className="bg-white rounded-lg shadow-xl p-6 text-center transition-transform transform hover:scale-105">
+                <div className="flex flex-row items-center justify-center gap-2 mb-3">
+                  <MdWork size={32} className="text-scale-100" />
+                  <h3 className="text-xl font-semibold text-black">
+                    Trabajo
+                  </h3>
+                </div>
+                <p className="text-custom-gray">
+                  Un espacio clave para impulsar prácticas sustentables: optimizar procesos, reducir el consumo y promover una cultura ambiental desde lo profesional.
+                </p>
+              </div>
+
+              {/* Comunidad */}
+              <div className="bg-white rounded-lg shadow-xl p-6 text-center transition-transform transform hover:scale-105">
+                <div className="flex flex-row items-center justify-center gap-2 mb-3">
+                  <FaUsers size={32} className="text-scale-100" />
+                  <h3 className="text-xl font-semibold text-black">
+                    Comunidad
+                  </h3>
+                </div>
+                <p className="text-custom-gray">
+                  Participar en campañas barriales, talleres ambientales o redes locales fortalece el impacto colectivo y mejora la calidad de vida del entorno.
+                </p>
+              </div>
+
+              {/* Naturaleza */}
+              <div className="bg-white rounded-lg shadow-xl p-6 text-center transition-transform transform hover:scale-105">
+                <div className="flex flex-row items-center justify-center gap-2 mb-3">
+                  <MdForest size={32} className="text-scale-100" />
+                  <h3 className="text-lg font-semibold text-black">
+                    Entornos Naturales
+                  </h3>
+                </div>
+                <p className="text-custom-gray">
+                  Playas, parques y áreas protegidas necesitan cuidados especiales. Preservar la biodiversidad y apoyar economías locales responsables es esencial.
+                </p>
+              </div>
+
+              {/* Ciudad */}
+              <div className="bg-white rounded-lg shadow-xl p-6 text-center transition-transform transform hover:scale-105">
+                <div className="flex flex-row items-center justify-center gap-2 mb-3">
+                  <MdLocationCity size={32} className="text-scale-100" />
+                  <h3 className="text-xl font-semibold text-black">
+                    Ciudad
+                  </h3>
+                </div>
+                <p className="text-custom-gray">
+                  La calle es un espacio cotidiano donde nuestras decisiones, como la movilidad o el consumo, generan impactos reales y duraderos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
 
       <WaveDivider
         color={["#c6d7cf", "#02523a"]}
@@ -645,11 +813,52 @@ const LandingPage = () => {
 
       {/* como */}
       <section
-        className="py-16 px-8 bg-gray-100 flex flex-col min-h-screen"
         id="como"
+        className="relative w-full min-h-screen flex justify-center items-center bg-gray-100 z-20"
+        style={{
+          backgroundImage: "url(/mundoSustentableGris.png)",
+          backgroundSize: "87%",
+          backgroundPosition: "bottom",
+          backgroundRepeat: "no-repeat",
+        }}
       >
-        como
+        {/* Título central */}
+        <h2 className="absolute text-4xl font-bold text-black bg-white/80 rounded-xl p-3 shadow-xl text-center justify-center">
+          ¿Cómo ser sustentable?
+        </h2>
+
+        {/* Contenedor circular */}
+        <div className="relative w-96 h-96 rounded-full flex justify-center items-center">
+          {/* Los 8 items, cada uno dentro de un div rotado */}
+          {comoItems.map((item, i) => {
+            const angleDeg = (360 / comoItems.length) * i;
+            const angleRad = (angleDeg * Math.PI) / 180;
+
+            // Coordenadas relativas al centro
+            const x = 50 + Math.cos(angleRad) * (2800 / window.innerWidth * 100);
+            const y = 50 + Math.sin(angleRad) * (800 / window.innerHeight * 100);
+
+            return (
+              <div
+                key={item.title}
+                className="flex flex-col items-center justify-center absolute w-80 min-h-[34%] p-4 
+                  bg-custom-green/90 text-slate-200 rounded-lg shadow-lg border-2 border-white
+                  transition-all duration-100 ease-in-out hover:scale-110 hover:shadow-2xl -translate-x-1/2 -translate-y-1/2"
+                style={{
+                  top: `${y}%`,
+                  left: `${x}%`,
+                }}
+              >
+                <h3 className="text-lg font-semibold mb-2 text-center">{item.title}</h3>
+                <p className="text-sm text-center">{item.desc}</p>
+              </div>
+            );
+          })}
+        </div>
       </section>
+
+
+
       <WaveDivider color={["#f3f4f6"]} backgroundColor="white" rotate={true} />
 
       {/* con que */}
