@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import NavbarLP from "./NavbarLP";
 import { MdForest, MdOutlineContactSupport, MdOutlineContactless, MdCastForEducation } from "react-icons/md";
 import { GiRecycle, GiFactory } from "react-icons/gi";
 import { FaLightbulb, FaTools, FaHandHoldingHeart, FaFlagCheckered, FaChartLine, FaSchool } from "react-icons/fa";
@@ -162,7 +161,7 @@ const LandingPage = () => {
   ];
   const recursos = [
     {
-      id: 1,
+      id: 9,
       title: "Instrumentos",
       description:
         "",
@@ -174,7 +173,7 @@ const LandingPage = () => {
       ],
     },
     {
-      id: 2,
+      id: 10,
       title: "Objetos",
       description:
         "",
@@ -186,7 +185,7 @@ const LandingPage = () => {
       ],
     },
     {
-      id: 3,
+      id: 11,
       title: "Recursos",
       description:
         "",
@@ -199,7 +198,7 @@ const LandingPage = () => {
       ],
     },
     {
-      id: 4,
+      id: 12,
       title: "Elementos",
       description:
         "",
@@ -212,7 +211,7 @@ const LandingPage = () => {
       ],
     },
     {
-      id: 5,
+      id: 13,
       title: "Medios",
       description:
         "",
@@ -225,7 +224,7 @@ const LandingPage = () => {
       ],
     },
     {
-      id: 6,
+      id: 14,
       title: "Herramientas",
       description:
         "",
@@ -239,7 +238,7 @@ const LandingPage = () => {
   ];
 
   const recursos2 = [{
-    id: 7,
+    id: 15,
     title: "Utensilios",
     description:
       "",
@@ -281,21 +280,21 @@ const LandingPage = () => {
 
   const cardDataQuien1 = [
     {
-      id: 1,
+      id: 4,
       title: "Gobiernos",
       description:
         "Crean y aplican marcos legales y políticas públicas ambientales que regulan una sociedad.",
       icon: <RiGovernmentLine className="w-16 h-16 mb-4" />,
     },
     {
-      id: 2,
+      id: 5,
       title: "Empresas",
       description:
         "Responden y adaptan sus procesos para respetar las normas ambientales. Innovan en tecnologías limpias, realizan reportes de su impacto, y buscan reducir la huella ecológica.",
       icon: <IoMdBusiness className="w-16 h-16 mb-4" />,
     },
     {
-      id: 3,
+      id: 6,
       title: "Ciudadanos",
       description:
         "Practican el consumo consciente, participan activamente en la defensa ambiental, y exigen transparencia de consumo a los gobiernos y empresas.",
@@ -304,14 +303,14 @@ const LandingPage = () => {
   ]
 
   const cardDataQuien2 = [{
-    id: 4,
+    id: 7,
     title: "ONGs y Activistas",
     description:
       "Denuncian ecocidios, educan comunidades y presionan a los tomadores de decisiones mediante campañas y litigios.",
     icon: <MdForest className="w-16 h-16 mb-4" />,
   },
   {
-    id: 5,
+    id: 8,
     title: "Educadores y Medios de Comunicación",
     description:
       "Transmiten buenas prácticas y alertan sobre problemas ambientales para generar conciencia en la sociedad.",
@@ -363,7 +362,7 @@ const LandingPage = () => {
 
   return (
     <div className="bg-white font-montserrat text-gray-800">
-      <NavbarLP />
+      
 
       <div className="flex justify-center mt-20 botones-landing">
         <div className="relative w-full max-w-[70%] mx-auto h-auto bg-gray-100 rounded-lg shadow-lg flex items-center justify-center p-4 mb-8 sm:mb-10">
@@ -1027,7 +1026,7 @@ const LandingPage = () => {
               onClick={() => scrollToSection("top")}
             />
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=utn.sustentable@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=sustentabilidad.vida@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1055,12 +1054,12 @@ const LandingPage = () => {
             </ul>
           </div>
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=utn.sustentable@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=sustentabilidad.vida@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 text-custom-green font-bold"
           >
-            utn.sustentable@gmail.com
+            sustentabilidad.vida@gmail.com
           </a>
         </div>
       </section>
