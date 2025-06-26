@@ -24,8 +24,8 @@ const LandingPage = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Informe-Sustentabilidad-2025.pdf';
-    link.download = 'Informe-Sustentabilidad-2025.pdf';
+    link.href = '/Entendamos-Sustentabilidad-GreenOpsConsulting.pdf.pdf';
+    link.download = 'Entendamos la Sustentabilidad - GreenOps Consulting.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
