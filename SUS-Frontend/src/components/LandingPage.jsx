@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NavbarLP from "./NavbarLP";
 import { MdForest, MdOutlineContactSupport, MdOutlineContactless, MdCastForEducation } from "react-icons/md";
 import { GiRecycle, GiFactory } from "react-icons/gi";
 import { FaLightbulb, FaTools, FaHandHoldingHeart, FaFlagCheckered, FaChartLine, FaSchool } from "react-icons/fa";
@@ -30,19 +31,6 @@ const LandingPage = () => {
     document.body.removeChild(link);
   };
 
-  // colores:
-  // white
-  // verde = #004d29
-  // gris = #f3f4f6
-
-  // SVG Divisores
-  // Predeterminado
-  // M0,160L80,181.3C160,203,320,245,480,261.3C640,277,800,267,960,234.7C1120,203,1280,149,1360,122.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z
-
-  // M0,160C80,120,160,80,240,64C320,48,400,64,480,96C560,128,640,176,720,192C800,208,880,176,960,160C1040,144,1120,128,1200,160C1280,192,1360,256,1440,320L1440,320L0,320Z
-  // M0,128L80,106.7C160,85,320,43,480,64C640,85,800,181,960,170.7C1120,160,1280,64,1360,42.7L1440,21L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z
-  // M0,192L40,186.7C80,181,160,171,240,154.7C320,139,400,117,480,128C560,139,640,181,720,192C800,203,880,181,960,154.7C1040,128,1120,96,1200,96C1280,96,1360,128,1400,144L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z
-
   const paraQueActions = [
     {
       id: 1,
@@ -52,7 +40,7 @@ const LandingPage = () => {
           Promover un modelo de desarrollo humano que asegure el bienestar de las personas sin agotar los recursos del planeta ni causar daños irreversibles al medio ambiente.
         </>
       ),
-      icon: <FaLightbulb style={{ color: "#02523a" }} />,
+      icon: <FaLightbulb style={{ color: "#107570" }} />,
     },
     {
       id: 2,
@@ -62,7 +50,7 @@ const LandingPage = () => {
           Satisfacer las necesidades actuales de la sociedad sin comprometer las posibilidades de las futuras generaciones, manteniendo un equilibrio
         </>
       ),
-      icon: <FaTools style={{ color: "#02523a" }} />,
+      icon: <FaTools style={{ color: "#107570" }} />,
     },
     {
       id: 3,
@@ -72,7 +60,7 @@ const LandingPage = () => {
           Construir un futuro justo, equitativo y saludable a través del uso racional de los recursos, la conservación de los ecosistemas, y la promoción de prácticas responsables e inclusivas.
         </>
       ),
-      icon: <FaFlagCheckered style={{ color: "#02523a" }} />,
+      icon: <FaFlagCheckered style={{ color: "#107570" }} />,
     },
     {
       id: 4,
@@ -82,7 +70,7 @@ const LandingPage = () => {
           Impulsar un cambio que transforme la manera en que producimos, consumimos y convivimos,promoviendo una cultura de responsabilidad intergeneracional y de respeto hacia el entorno natural
         </>
       ),
-      icon: <FaHandHoldingHeart style={{ color: "#02523a" }} />,
+      icon: <FaHandHoldingHeart style={{ color: "#107570" }} />,
     },
   ];
 
@@ -100,7 +88,7 @@ const LandingPage = () => {
         </>
 
       ),
-      icon: <FaChartLine style={{ color: "#004d29" }} />,
+      icon: <FaChartLine style={{ color: "#107570" }} />,
     },
     {
       id: 2,
@@ -112,7 +100,7 @@ const LandingPage = () => {
           Durante la transición
         </>
       ),
-      icon: <GoArrowDown style={{ color: "#02523a" }} />,
+      icon: <GoArrowDown style={{ color: "#107570" }} />,
     },
     {
       id: 3,
@@ -125,7 +113,7 @@ const LandingPage = () => {
         </>
 
       ),
-      icon: <GiRecycle style={{ color: "#004d29" }} />,
+      icon: <GiRecycle style={{ color: "#107570" }} />,
     },
 
   ];
@@ -141,7 +129,7 @@ const LandingPage = () => {
 
         </>
       ),
-      icon: <FaPeopleGroup style={{ color: "#02523a" }} />,
+      icon: <FaPeopleGroup style={{ color: "#107570" }} />,
     },
     {
       id: 5,
@@ -155,7 +143,7 @@ const LandingPage = () => {
         </>
 
       ),
-      icon: <GiFactory style={{ color: "#004d29" }} />,
+      icon: <GiFactory style={{ color: "#107570" }} />,
     },
 
   ];
@@ -362,7 +350,7 @@ const LandingPage = () => {
 
   return (
     <div className="bg-white font-montserrat text-gray-800">
-      
+      <NavbarLP />
 
       <div className="flex justify-center mt-20 botones-landing">
         <div className="relative w-full max-w-[70%] mx-auto h-auto bg-gray-100 rounded-lg shadow-lg flex items-center justify-center p-4 mb-8 sm:mb-10">
@@ -379,14 +367,14 @@ const LandingPage = () => {
               onClick={() => scrollToSection("por_que")}
               className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
             >
-              ¿Por Qué?
+              ¿Por qué?
             </button>
 
             <button
               className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
               onClick={() => scrollToSection("para_que")}
             >
-              ¿Para Qué?
+              ¿Para qué?
             </button>
 
             <button
@@ -417,7 +405,7 @@ const LandingPage = () => {
               className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
               onClick={() => scrollToSection("con_que")}
             >
-              ¿Con Qué?
+              ¿Con qué?
             </button>
             <button
               className="bg-transparent text-gray-700 rounded px-4 py-1 transition duration-200 hover:bg-gray-200 w-full sm:w-auto mb-2 sm:mb-0"
@@ -436,7 +424,7 @@ const LandingPage = () => {
         <div className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.4)] bg-opacity-100 bg-custom-green rounded-xl flex flex-col lg:flex-row items-center justify-center p-4 min-h-[50vh] max-w-[75%] xl:px-2">
           <div className="flex-1 flex flex-col items-center justify-center p-4 text-white order-2 lg:order-1">
             <p className="text-4xl text-porcentaje transition duration-300 transform hover:scale-105 font-semibold text-center">
-              ¡Comprendamos la Sustentabilidad!
+              ¡Comprendamos la sustentabilidad!
             </p>
           </div>
           <div className="flex-1 flex justify-center items-center p-4 order-1 lg:order-2">
@@ -449,9 +437,9 @@ const LandingPage = () => {
         </div>
       </header>
 
-      <WaveDivider color={["white"]} backgroundColor="#02523a" rotate={true} />
+      <WaveDivider color={["white"]} backgroundColor="#107570" rotate={true} />
 
-      {/* Que es */}
+      {/* Qué es */}
       <section
         id="que_es"
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 bg-custom-green text-center relative"
@@ -464,7 +452,7 @@ const LandingPage = () => {
       >
         <div className="bg-gradient-to-b from-custom-green/60 to-custom-green/90 rounded-xl p-4 shadow-xl gradiant-white">
           <h2 className="text-3xl font-semibold mb-6 text-white">
-            ¿Qué es la Sustentabilidad?
+            ¿Qué es la sustentabilidad?
           </h2>
           <p className="text-lg text-white mb-8 max-w-2xl">
             Es la capacidad de un sistema para mantenerse a lo largo del tiempo sin agotar los recursos naturales ni dañar el entorno.
@@ -475,7 +463,7 @@ const LandingPage = () => {
       </section>
 
       <WaveDivider
-        color={["#c6d7cf", "#02523a"]}
+        color={["#a0cfc5", "#107570"]}
         rotate={true}
         svgPaths={[
           "M1440,128L1360,106.7C1280,85,1120,43,960,64C800,85,640,181,480,170.7C320,160,160,64,80,42.7L0,21L0,320L80,320C160,320,320,320,480,320C640,320,800,320,960,320C1120,320,1280,320,1360,320L1440,320Z",
@@ -483,15 +471,14 @@ const LandingPage = () => {
         ]}
       />
 
-
-      {/* Por que */}
+      {/* Por qué */}
       <section
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 text-center"
         id="por_que"
       >
         <h2 className="text-3xl font-semibold mb-6">¿Por qué surge la sustentabilidad?</h2>
         <p className="text-lg mb-10">
-          Es una reacción a los efectos perjudiciales del desarrollo insostenible.
+          Es una reacción a los efectos perjudiciales del desarrollo no sostenible.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px]">
           {cardDataPorQue.map((card) => (
@@ -524,14 +511,14 @@ const LandingPage = () => {
             </div>
           ))}
         </div>
-        <hr class="border-t-2 border-gray-300 my-6 w-[90%] mx-auto mt-10" />
-        <p className="text-lg  italic">La sustentabilidad no es una opción, sino una necesidad urgente para asegurar un futuro habitable, protegiendo el planeta y garantizando bienestar para las próximas generaciones.</p>
-        <hr class="border-t-2 border-gray-300 my-6 w-[90%] mx-auto" />
+        <hr className="border-t-2 border-gray-300 my-6 w-[90%] mx-auto mt-10" />
+        <p className="text-lg italic">La sustentabilidad no es una opción, sino una necesidad urgente para asegurar un futuro habitable, protegiendo el planeta y garantizando el bienestar de las próximas generaciones.</p>
+        <hr className="border-t-2 border-gray-300 my-6 w-[90%] mx-auto" />
       </section>
 
       <WaveDivider color={["#f3f4f6"]} backgroundColor="white" rotate={false} />
 
-      {/* Para que */}
+      {/* Para qué */}
       <section
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 bg-gray-100 text-center"
         id="para_que"
@@ -540,7 +527,7 @@ const LandingPage = () => {
           ¿Para qué sirve la sustentabilidad?
         </h2>
         <p className="text-lg mb-6">
-          La sustentabilidad no es solo una meta, sino una necesidad urgente y compartida
+          La sustentabilidad no es solo una meta, sino una necesidad urgente y compartida.
         </p>
         <div className="flex justify-center">
           <div className="grid grid-cols-4 gap-10">
@@ -563,14 +550,14 @@ const LandingPage = () => {
 
       <MountainDivider backgroundColor="#f3f4f6" />
 
-      {/* quien */}
+      {/* Quién */}
       <section
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 text-center bg-custom-green text-white"
         id="quien"
       >
         <h2 className="text-3xl font-semibold mb-6">¿Quién es responsable de la sustentabilidad?</h2>
         <p className="text-lg mb-10">
-          La responsabilidad es colectiva y compartida. Todos en la socidad participan y asumen un rol para preservar el planeta.
+          La responsabilidad es colectiva y compartida. Todos en la sociedad participan y asumen un rol para preservar el planeta.
         </p>
         <div className="grid grid-cols-3 gap-8 w-full max-w-[1200px]">
           {cardDataQuien1.map((card) => (
@@ -628,13 +615,13 @@ const LandingPage = () => {
             </div>
           ))}
         </div>
-        <hr class="border-t-2 border-gray-300 my-6 w-[90%] mx-auto mt-10" />
-        <p className="text-lg  italic">Toda la sociedad está afectada por las decisiones y acciones relacionadas con la sustentabilidad. El impacto es global y abarca a las generaciones presentes y futuras.</p>
-        <hr class="border-t-2 border-gray-300 my-6 w-[90%] mx-auto" />
+        <hr className="border-t-2 border-gray-300 my-6 w-[90%] mx-auto mt-10" />
+        <p className="text-lg italic">Toda la sociedad está afectada por las decisiones y acciones relacionadas con la sustentabilidad. El impacto es global y abarca a las generaciones presentes y futuras.</p>
+        <hr className="border-t-2 border-gray-300 my-6 w-[90%] mx-auto" />
       </section>
 
       <WaveDivider
-        color={["#c6d7cf", "#02523a"]}
+        color={["#a0cfc5", "#107570"]}
         backgroundColor="white"
         rotate={true}
         svgPaths={[
@@ -643,7 +630,7 @@ const LandingPage = () => {
         ]}
       />
 
-      {/* cuando */}
+      {/* Cuándo */}
       <section
         className="px-8 bg-white flex flex-col justify-center min-h-screen"
         id="cuando"
@@ -660,7 +647,6 @@ const LandingPage = () => {
               <p className="mb-8 text-black">
                 Cuanto más temprano y constante sea el compromiso, mayores serán las posibilidades de <span className="font-bold">proteger el entorno y asegurar un futuro sostenible</span> para todos.
               </p>
-
             </div>
           </div>
           <div className="flex-1">
@@ -680,7 +666,6 @@ const LandingPage = () => {
                 <p className="text-slate-100">
                   El momento ideal para involucrarse es desde el principio: en la etapa de prevención o al inicio de un conflicto ambiental. Participar desde temprano permite influir en las decisiones y maximiza el impacto positivo, evitando consecuencias irreversibles.
                 </p>
-
               </div>
               <div className="bg-custom-green border-2 rounded-lg shadow-xl p-6 text-center transition-transform transform hover:scale-105">
                 <h3 className="text-xl font-semibold mb-4 text-slate-100">
@@ -696,7 +681,7 @@ const LandingPage = () => {
       </section>
 
       <WaveDivider
-        color={["#397559", "#02523a"]}
+        color={["#299e87", "#107570"]}
         backgroundColor="white"
         rotate={false}
         svgPaths={[
@@ -705,8 +690,7 @@ const LandingPage = () => {
         ]}
       />
 
-
-      {/* donde */}
+      {/* Dónde */}
       <section
         className="px-8 bg-custom-green flex flex-col justify-center min-h-screen"
         id="donde"
@@ -774,7 +758,7 @@ const LandingPage = () => {
                 <div className="flex flex-row items-center justify-center gap-2 mb-3">
                   <MdForest size={32} className="text-scale-100" />
                   <h3 className="text-lg font-semibold text-black">
-                    Entornos Naturales
+                    Entornos naturales
                   </h3>
                 </div>
                 <p className="text-custom-gray">
@@ -799,9 +783,8 @@ const LandingPage = () => {
         </div>
       </section>
 
-
       <WaveDivider
-        color={["#c6d7cf", "#02523a"]}
+        color={["#a0cfc5", "#107570"]}
         backgroundColor={"#f3f4f6"}
         rotate={true}
         svgPaths={[
@@ -810,7 +793,7 @@ const LandingPage = () => {
         ]}
       />
 
-      {/* como */}
+      {/* Cómo */}
       <section
         id="como"
         className="relative w-full min-h-screen flex justify-center items-center bg-gray-100 z-20"
@@ -828,7 +811,7 @@ const LandingPage = () => {
 
         {/* Contenedor circular */}
         <div className="relative w-96 h-96 rounded-full flex justify-center items-center">
-          {/* Los 8 items, cada uno dentro de un div rotado */}
+          {/* Los 8 ítems, cada uno dentro de un div rotado */}
           {comoItems.map((item, i) => {
             const angleDeg = (360 / comoItems.length) * i;
             const angleRad = (angleDeg * Math.PI) / 180;
@@ -856,11 +839,9 @@ const LandingPage = () => {
         </div>
       </section>
 
-
-
       <WaveDivider color={["#f3f4f6"]} backgroundColor="white" rotate={true} />
 
-      {/* con que */}
+      {/* Con qué */}
       <section
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 text-center"
         id="con_que"
@@ -933,7 +914,7 @@ const LandingPage = () => {
 
       <WaveDivider color={["#f3f4f6"]} backgroundColor="white" rotate={false} />
 
-      {/* cuanto */}
+      {/* Cuánto */}
       <section
         className="min-h-screen flex flex-col items-center justify-center py-16 px-8 bg-gray-100 text-center"
         id="cuanto"
@@ -949,7 +930,7 @@ const LandingPage = () => {
                 key={action.id}
                 className="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 min-h-[200px] flex flex-col justify-between"
                 style={{
-                  border: "2px solid #004d29",
+                  border: "2px solid #107570",
                   borderRadius: "8px",
                 }}
               >
@@ -969,7 +950,7 @@ const LandingPage = () => {
                 key={action.id}
                 className="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 min-h-[200px] flex flex-col justify-between"
                 style={{
-                  border: "2px solid #004d29",
+                  border: "2px solid #107570",
                   borderRadius: "8px",
                 }}
               >
@@ -985,7 +966,6 @@ const LandingPage = () => {
         <br />
       </section>
 
-
       <WaveDivider
         color={["#f3f4f6"]}
         backgroundColor="white"
@@ -995,23 +975,22 @@ const LandingPage = () => {
         ]}
       />
 
-      {/* Boton de descarga */}
+      {/* Botón de descarga */}
       <section
         className="min-h-[30%] py-16 px-8 bg-white text-center"
         id="contacto">
-        <hr class="border-t-2 border-gray-300 mb-20 w-[90%] mx-auto" />
+        <hr className="border-t-2 border-gray-300 mb-20 w-[90%] mx-auto" />
 
         <div className="items-center justify-center p-30">
           <p className="text-lg italic pb-5">¿Querés profundizar en alguna de estas preguntas? Te invitamos a explorar el siguiente informe sobre la sustentabilidad, donde desarrollamos cada tema con más detalle.</p>
           <button
             className="bg-custom-green p-7 m-2 text-white text-lg font-bold rounded-full shadow-2xl hover:scale-[1.2] transition transition-duration-200"
             onClick={handleDownload}>
-            Descarga el informe completo</button>
+            Descargá el informe completo</button>
         </div>
 
-        <hr class="border-t-2 border-gray-300 mt-[5%] mx-auto w-[90%] " />
+        <hr className="border-t-2 border-gray-300 mt-[5%] mx-auto w-[90%] " />
       </section>
-
 
       <section
         className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-white text-center"
@@ -1026,7 +1005,7 @@ const LandingPage = () => {
               onClick={() => scrollToSection("top")}
             />
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=sustentabilidad.vida@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=asesoria@greenops.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1038,33 +1017,33 @@ const LandingPage = () => {
         <div className="flex-1 mb-8 lg:mb-0 text-center">
           <h2 className="text-3xl font-semibold mb-6">Contáctanos</h2>
           <p className="text-lg text-gray-700 mb-4">
-            ¿Necesitas comunicarte con nosotros? Puedes contáctarnos para:
+            ¿Necesitás comunicarte con nosotros? Podés contactarnos para:
           </p>
           <div className="flex justify-center">
             <ul className="list-disc list-inside text-start text-lg text-gray-700 mb-4">
               <li className="flex items-center">
-                <BiQuestionMark className="mr-2 w-5 h-5" /> Consultas
+                <BiQuestionMark className="mr-2 w-5 h-5" /> Contratar consultoría
               </li>
               <li className="flex items-center">
                 <RiStarLine className="mr-2 w-5 h-5" /> Recomendaciones
               </li>
               <li className="flex items-center">
-                <BiSupport className="mr-2 w-5 h-5" /> Ayuda y Soporte
+                <BiSupport className="mr-2 w-5 h-5" /> Ayuda y soporte
               </li>
             </ul>
           </div>
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=sustentabilidad.vida@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=asesoria@greenops.com"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 text-custom-green font-bold"
           >
-            sustentabilidad.vida@gmail.com
+            asesoria@greenops.com
           </a>
         </div>
       </section>
 
-      <MountainDivider color={["#c6d7cf", "#397559", "#02523a"]} />
+      <MountainDivider color={["#a0cfc5", "#299e87", "#107570"]} />
     </div>
   );
 };
@@ -1104,7 +1083,7 @@ const WaveDivider = ({ color, backgroundColor, rotate = false, svgPaths }) => {
 };
 
 const MountainDivider = ({
-  color = ["#c6d7cf", "#397559", "#02523a"],
+  color = ["#a0cfc5", "#299e87", "#107570"],
   rotate = false,
   backgroundColor,
 }) => {

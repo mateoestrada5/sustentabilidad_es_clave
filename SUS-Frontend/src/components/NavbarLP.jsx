@@ -13,8 +13,8 @@ const NavbarLP = () => {
       <div className="flex items-center justify-center w-full ">
         {/* Logo + Título alineados a la izquierda */}
         <button onClick={reloadPage} className="flex items-center border-2 px-6 py-1 rounded-full border-custom-green/70">
-          <img src={"/logo.png"} alt="Logo UTN" className="h-6 sm:h-8 mr-3" />
-          <h1 className="text-2xl font-bold text-custom-green whitespace-nowrap">La Sustentabilidad</h1>
+          <img src={"/logo.png"} className="h-6 sm:h-8 mr-3" />
+          <h1 className="text-2xl font-bold text-custom-green whitespace-nowrap">GreenOps Consulting</h1>
         </button>
       </div>
     </nav >
