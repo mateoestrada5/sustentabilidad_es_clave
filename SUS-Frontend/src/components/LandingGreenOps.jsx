@@ -68,6 +68,50 @@ const LandingGreenOps = () => {
                 </div>
             </section>
 
+            {/* Introducción a la sustentabilidad */}
+            <section className="bg-gray-100 py-20 px-6" data-aos="fade-up">
+                <div className="max-w-6xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold text-custom-blue mb-4">
+                        ¿Por qué integrar la sustentabilidad en tu negocio?
+                    </h2>
+                    <p className="text-gray-600 text-lg mb-6">
+                        La sustentabilidad ya no es una opción, sino un necesidad estratégica. Responde a desafíos urgentes (como el cambio climático, la pérdida de recursos y las desigualdades sociales) y abre el camino hacia una gestión más eficiente, responsable y resiliente.
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-8 mt-12 text-left">
+                        <div className="flex items-start gap-4">
+                            <FaChartLine className="text-blue-500 text-3xl mt-1" />
+                            <div>
+                                <h4 className="font-semibold text-custom-blue mb-1">Un nuevo modelo de valor</h4>
+                                <p className="text-sm">
+                                    Incorporar prácticas sostenibles te permite transformar la eficiencia en rentabilidad, reducir desperdicios y anticiparte a regulaciones futuras.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                            <FaBalanceScale className="text-yellow-500 text-3xl mt-1" />
+                            <div>
+                                <h4 className="font-semibold text-custom-blue mb-1">Gestión de riesgos inteligentes</h4>
+                                <p className="text-sm">
+                                    Al adoptar criterios sustentables, tu empresa se prepara para enfrentar crisis ambientales, sociales y económicas con mayor solidez.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                            <FaRegSmile className="text-green-500 text-3xl mt-1" />
+                            <div>
+                                <h4 className="font-semibold text-custom-blue mb-1">Una misión que inspira</h4>
+                                <p className="text-sm">
+                                    Las empresas con propósito atraen y retienen talento, fortalecen su reputación y generan vínculos más sólidos con sus comunidades.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="text-gray-600 text-md mt-10 max-w-3xl mx-auto">
+                        Integrar la sustentabilidad es integrar el futuro. Es avanzar hacia una cultura organizacional que equilibra el impacto económico, social y ambiental para lograr un desarrollo duradero y consciente.
+                    </p>
+                </div>
+            </section>
+
             {/* Beneficios */}
             <section className="bg-white py-20 px-6" data-aos="fade-up">
                 <div className="max-w-6xl mx-auto text-center">
