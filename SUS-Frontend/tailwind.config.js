@@ -5,9 +5,9 @@ export default {
     extend: {
       colors: {
         'custom-green': '#107570',
-        'custom-gray': '#4e5766',
-        'custom-blue': '#1a2b4f',
-        'custom-red' : '#ce1126'
+        
+        'custom-blue': '#107570',
+        
       },
       fontFamily: {
         montserrat: "Montserrat"
